@@ -6,6 +6,9 @@ on:
 jobs:
   issues-job:
     runs-on: ubuntu-latest
+    env:
+      issue_title: "${{ github.event.issue.title }}"
+     
     steps:
       - uses: actions/checkout@v4.1.1
 
